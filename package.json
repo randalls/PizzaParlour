@@ -80,10 +80,10 @@
     "showdown": "1.2.2"
   },
   "engines": {
-    "node": "4.2.2"
+    "node": "4.2.4"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Vizzda/vizzda-lib.git"
+    "url": "git@github.com:randalls/PizzaParlour.git"
   }
 }
