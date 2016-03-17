@@ -1,0 +1,80 @@
+.modal-notes {
+    .modal-header {
+        padding: 20px 30px;
+    }
+    .modal-body {
+        min-height: 150px;
+        padding: 30px;
+    }
+}
+
+.notes-form {
+    border-bottom: none;
+}
+
+.notes {
+
+    .notes-heading {
+        .title {
+            margin-top: 0px;
+        }
+    }
+
+    .dropdown {
+        .dropdown-toggle {
+            color: @grey-dark;
+            transition: color linear 200ms;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        &.open .dropdown-toggle {
+            color: @black;
+        }
+    }
+
+    .media-heading {
+        small {
+            font-size: inherit;
+            font-weight: @light;
+            color: @grey-dark;
+        }
+    }
+
+    .notes-list > [note] {
+        &:last-child {
+            .note {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .note {
+        @noteEditColor: @grey-light;
+
+        position: relative;
+
+        &.editing, &.editable:hover {
+            .actions-save {
+                .btn-cancel {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        &.editable {
+            .btn-note-edit {
+                display: none;
+            }
+            &:hover {
+                .btn-note-edit {
+                    display: block;
+                }
+                .date-text {
+                    display: none;
+                }
+            }
+        }
+    }
+}

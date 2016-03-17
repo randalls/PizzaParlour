@@ -1,0 +1,185 @@
+@map-panel-width: 360px;
+@map-panel-footer-height: 40px;
+@map-panel-header-height: 180px;
+
+@map-panel-active-height: 520px;
+@map-panel-short-height: 320px;
+
+.panel {
+
+    background: @grey-light;
+    border-radius: @border-radius-base;
+    padding: 15px 0px 15px 0px;
+
+    .panel-heading {
+        background: none;
+        border-bottom: none;
+        padding: 4px 20px 20px 20px;
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+
+            .btn {
+                margin-top: -4px;
+            }
+        }
+    }
+
+    .panel-footer {
+        border-top: 0px;
+    }
+
+    &.panel-list {
+        box-shadow: none;
+
+        .panel-body {
+            padding: 0px 20px;
+        }
+
+        .list-group {
+            .list-group-item {
+                background: none;
+                padding-top: 8px;
+                padding-bottom: 7px;
+                &:last-child {
+                    border-bottom: none;
+                }
+                & > a {
+                    color: @black;
+                }
+            }
+        }
+    }
+
+    &.panel-dropdown {
+        background: none;
+        border: none;
+        margin-bottom: 0px;
+        .panel-heading {
+            h1, h2, h3, h4, h5, h6 {
+                margin-top: 0px;
+            }
+        }
+        .panel-footer {
+            background: none;
+            border: none;
+            margin-top: 10px;
+
+            .btn {
+                padding: 0px;
+            }
+        }
+
+        .panel-footer, .panel-heading, .panel-body {
+            padding: 0px;
+        }
+    }
+
+    &.panel-map-window {
+
+
+        .shadow-z-1();
+
+        background: @white;
+        border: 0px;
+        height: 100%;
+        width: @map-panel-width;
+        overflow: hidden;
+        padding: 0px;
+        position: relative;
+
+        &, & > .panel-heading, & > .panel-footer {
+            background: @white;
+        }
+
+        & > .panel-heading {
+            height: @map-panel-header-height;
+            overflow-y: scroll;
+            padding: 10px;
+            position: relative;
+
+            & > .panel-title {
+                position: absolute;
+                bottom: 0px;
+                color: @white;
+                padding: 10px;
+            }
+
+            & > .close {
+                color: @white;
+                opacity: 0.75;
+                text-shadow: none;
+
+                &:hover {
+                    opacity: 0.4;
+                }
+            }
+        }
+
+        & > .panel-body {
+            height: @map-panel-short-height - @map-panel-footer-height - @map-panel-header-height;
+            overflow-y: scroll;
+            padding-top: 0px;
+            padding-bottom: 0px;
+
+            & > .list-group {
+                .list-group-item {
+                    &:first-child {
+                        border-top: none;
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+        & > .panel-footer {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            height: @map-panel-footer-height;
+            width: 100%;
+            padding: 0px;
+
+            & > .detail-link {
+                font-size: 12px;
+                line-height: 18px;
+                text-transform: uppercase;
+                display: block;
+                text-align: center;
+                padding: 11px 10px;
+            }
+        }
+    }
+
+    &.panel-event-window {
+
+    }
+}
+
+.active {
+    .panel > .panel-body {
+        height: @map-panel-active-height - @map-panel-footer-height - @map-panel-header-height;
+    }
+}
+
+.panel-group {
+    & > .panel-accordion {
+        background: @white;
+
+        .panel-heading {
+            &, a {
+                background-color: rgba(255, 255, 255, 0);
+                color: @black;
+                display: block;
+            }
+            padding: 15px;
+        }
+
+        & .panel-heading + .panel-collapse > .panel-body {
+            border-top: 0px;
+        }
+    }
+}

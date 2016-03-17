@@ -1,0 +1,30 @@
+<div class="layout layout-web">
+    <header class="container main-header">
+        <nav class="container nav">
+            <div class="row">
+                <div class="col-md-7">
+                    <div id="logo-parent">
+                        <a href="/">
+                            <div id="logo">
+                                <h1 class="display-5 text-center">Flippin' Pizza</h1>
+                                <h5 class="display-2 text-center">Our Way or Yours</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <ul class="nav-list list-inline pull-right">
+                        <li>
+                            <a ui-sref="menu.list" class="">Our Menu</a>
+                        </li>
+                        <li>
+                            <a ui-sref="create.pizza" class="">Create Your Own</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main ui-view name="page" autoscroll="true"></main>
+    <!-- <div footer layout="web"></div> -->
+</div>

@@ -1,0 +1,13 @@
+<div
+    class="{{ type }} {{ type }}-{{ ctrl.size || 'md' }} {{ type }}-content custom-{{ type }} {{ ctrl.direction ? ctrl.direction : 'left' }} {{ ctrl.up ? 'dropup' : '' }}"
+    on-toggle="ctrl.toggled(open)"
+    is-open="open"
+    auto-close="outsideClick"
+    uib-dropdown>
+    <button class="btn dropdown-toggle" ng-class="{'btn-link': type === 'dropdown', 'btn-select': type === 'select'}" href="" uib-dropdown-toggle>
+        <i class="material-icons md-18 pull-left" ng-if="ctrl.icon">{{ ctrl.icon }}</i>
+        <span class="btn-label" ng-class="{'btn-placeholder' : type === 'select'}">{{ ctrl.text }}</span>
+        <i ng-hide="ctrl.hideCaret" class="material-icons md-caret">&#xE5C5;</i>
+    </button>
+    <div class="dropdown-menu uib-dropdown-menu" ng-transclude></div>
+</div>

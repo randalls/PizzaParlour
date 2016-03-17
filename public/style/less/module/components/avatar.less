@@ -1,0 +1,39 @@
+.avatar {
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    padding: 6px;
+    display: block;
+    background: @grey-light;
+    border: @border-dark;
+    color: @grey-dark;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+
+    &.avatar-lg {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 24px;
+        line-height: 36px;
+        padding: 12px;
+    }
+
+    &.avatar-img {
+
+        padding: 0px;
+        & > img {
+            border-radius: 50%;
+            width: 30px;
+        }
+
+        &.avatar-lg > img {
+            width: 60px;
+        }
+
+        .initials {
+            display: none;
+        }
+    }
+}

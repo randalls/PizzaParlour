@@ -1,0 +1,60 @@
+[
+    {
+        "EventId": 132348,
+        "RecordedDate": "2015-03-12T00:00:00",
+        "Property": {
+            "PropertyName": "N/NEC Avenue 75 E & I-10",
+            "Latitude": 33.62126159667969,
+            "Longitude": -113.3195571899414
+        },
+        "EventType": {
+            "EventTypeId": 4,
+            "EventTypeName": "Sales"
+        },
+        "SalePrice": 1850000,
+        "DisplayModel": {
+            "EventSubCategory": null,
+            "PropertySubType": "Speculative",
+            "TotalAcres": 9.46,
+            "TotalBeds": null,
+            "TotalLots": null,
+            "TotalSqFt": null,
+            "TotalUnits": null,
+            "ValuePerAcre": 42177.58985200846,
+            "ValuePerBed": null,
+            "ValuePerFrontFoot": null,
+            "ValuePerLot": null,
+            "ValuePerSqFt": 0.9682642298440877,
+            "ValuePerUnit": null
+        }
+    },
+    {
+        "EventId": 132344,
+        "RecordedDate": "2015-03-12T00:00:00",
+        "Property": {
+            "PropertyName": "Vivendi Apartments (Planned)",
+            "Latitude": 33.48395426,
+            "Longitude": -111.90992838
+        },
+        "EventType": {
+            "EventTypeId": 3,
+            "EventTypeName": "P&Z"
+        },
+        "SalePrice": 1850000,
+        "DisplayModel": {
+            "EventSubCategory": null,
+            "PropertySubType": "Residential Use",
+            "TotalAcres": 1.7,
+            "TotalBeds": null,
+            "TotalLots": null,
+            "TotalSqFt": null,
+            "TotalUnits": null,
+            "ValuePerAcre": 1088235.294117647,
+            "ValuePerBed": null,
+            "ValuePerFrontFoot": null,
+            "ValuePerLot": null,
+            "ValuePerSqFt": 24.982444768541026,
+            "ValuePerUnit": null
+        }
+    }
+]

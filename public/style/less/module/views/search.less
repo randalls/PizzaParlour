@@ -1,0 +1,56 @@
+.state-search {
+    height: 100%;
+    main, main.application, .layout {
+        height: 100%;
+        min-height: 100%;
+    }
+}
+
+.page.page-search {
+    position: relative;
+    .results {
+        .results-heading {
+            padding: 20px 0px;
+            min-height: 80px;
+
+            .results-title {
+                margin-top: 0px;
+            }
+        }
+
+        margin-bottom: 60px;
+    }
+
+    &.page-map {
+        height: 100%;
+        min-height: 100%;
+
+        property-map {
+            display: block;
+            height: 100%;
+            min-height: 100%;
+
+            .map.map-search {
+                height: 100%;
+                min-height: 100%;
+            }
+        }
+    }
+
+    .well-search-results {
+        background: fade(@white, 90%);
+        transition: background 200ms;
+        &:hover {
+            background: @white;
+        }
+
+        .media {
+            margin-top: 0px;
+            padding: 25px 0px;
+
+            .media-left {
+                vertical-align: middle;
+            }
+        }
+    }
+}

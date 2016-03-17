@@ -1,0 +1,36 @@
+<section class="page page-marketing">
+    <section class="section">
+        <div class="container">
+            <div class="col-md-12">
+                <h2 class="display-3">Our Own Menu</h2>
+                <hr />
+                <ul class="list-unstyled menu-list">
+                    <li ng-repeat="pizza in ctrl.Menu" ng-if="pizza.name" class="menu-list-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span class="display-3">{{pizza.name}}</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <span class="display-1">{{pizza.description}}</span>
+                                </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-default btn-xs" ng-click="ctrl.getToppings(pizza)">Show Toppings</button>
+                                </div>
+                            </div>
+                            <!-- <div class="row" class="">
+                                <div class="col-md-12">
+                                    <ul class="list-inline">
+                                        <li ng-repeat="topping in pizza.toppings">
+                                            <span class="">topping</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>

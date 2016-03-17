@@ -1,0 +1,102 @@
+loading-spinner.center {
+    text-align: center;
+    display: inline-block;
+}
+
+.loading-spinner {
+    width: 24px;
+    height: 24px;
+    stroke: #444;
+    fill: #444;
+}
+
+.form-group-loading {
+    .loading-spinner {
+        position: absolute;
+        top: 8px;
+        right: 24px;
+        z-index:1200;
+    }
+}
+
+.loader-infinite {
+    .loading-spinner {
+        margin: auto;
+    }
+}
+
+.loader-primary {
+    .loading-spinner {
+        stroke: @brand-primary;
+        fill: @brand-primary;
+    }
+}
+
+.loading {
+    transition: 250ms linear opacity;
+    opacity: 0.5;
+}
+
+.spinner-btn {
+    .loading-spinner {
+        display: inline-block;
+        stroke: @white;
+        fill: @white;
+        width: 14px;
+        height: 14px;
+        line-height: 18px;
+        vertical-align: text-top;
+    }
+}
+
+.page-loader {
+    z-index: @globalLoaderLevel;
+
+    position: fixed;
+    bottom: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+
+    transition:opacity linear 0.5s;
+
+    &.ng-enter,
+    &.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+
+    &.ng-leave,
+    &.ng-enter.ng-enter-active {
+        opacity: 1;
+    }
+
+
+    & > .page-loader-container {
+        position: relative;
+        background: fade(@white, 95%);
+        width: 100%;
+        height: 100%;
+
+        & > .page-loader-icon {
+            background: @grey-light;
+            color: @grey-dark;
+            border-radius: 50%;
+            line-height: 36px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+
+            -webkit-animation-name: pulsate;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: infinite;
+        }
+    }
+}
+@-webkit-keyframes pulsate {
+    0% {opacity: 0.5}
+    50% {opacity: 1.0}
+    100% {opacity: 0.5}
+ }

@@ -1,0 +1,95 @@
+@import (inline) '../../lib/font-awesome/css/font-awesome.css';
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/material-Icons/MaterialIcons-Regular.eot');
+    src: url('../fonts/material-Icons/MaterialIcons-Regular.woff2') format('woff2'),
+        url('../fonts/material-Icons/MaterialIcons-Regular.woff') format('woff'),
+        url('../fonts/material-Icons/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.iconic {
+    text-rendering: auto;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px/1;  /* Preferred icon size */
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: inherit;
+    text-transform: none;
+    vertical-align: middle;
+
+    transform: translate(0, -1px);
+
+    speak: none;
+    display: inline-block;
+
+    &:before {
+        display: inline-block;
+        speak: none;
+        text-decoration: inherit;
+    }
+    &.pull-left {
+        margin-right: .3em;
+    }
+    &.pull-right{
+        margin-left: .3em;
+    }
+
+    .iconic();
+}
+
+// Rules for sizing the icon.
+.material-icons.md-caret {
+    font-size: 24px;
+    line-height: 24px;
+}
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; vertical-align: top; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+// Rules for using icons as black on a light background.
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+// Rules for using icons as white on a dark background.
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.material-icons {
+    &.glyphicon-chevron-right:before {
+        content: '\00E5CC';
+        font-size: 24px;
+    }
+    &.glyphicon-chevron-left:before {
+        content: '\00E5CB';
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: @screen-phone) {
+    .material-icons {
+        //vertical-align: -8%;
+    }
+}

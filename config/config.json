@@ -1,0 +1,13 @@
+{
+	"less_settings": {
+		"dest": "./public/style/css",
+		"src": "./public/style/less",
+		"prefix": "/style/css"
+	},
+	"api": {
+		"host": "pizzaserver.herokuapp.com",
+		"path": ""
+	},
+	"logger": {},
+	"defaultLocale": "en"
+}

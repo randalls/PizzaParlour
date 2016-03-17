@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h2 class="display-3">{{ title }}</h2>
+</div>
+<div class="modal-body" ng-include="template"></div>
+<div class="modal-footer">
+    <button class="btn {{ button.class }}" ng-click="$close('ok')" ng-if="!ok">
+        {{ button.text }}
+    </button>
+    <button class="btn {{ button.class }}" submit="ctrl.$processing" ng-disabled="ctrl.$processing" ng-click="ctrl.ok(ok, $close)" ng-if="ok">
+        {{ button.text }}
+    </button>
+    <button class="btn btn-simple btn-dim" ng-click="$dismiss('closed')" ng-if="cancellable">{{ 'actions.cancel' | vzdLocalize }}</button>
+</div>

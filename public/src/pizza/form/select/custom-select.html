@@ -1,0 +1,27 @@
+<div
+    class="select custom-select select-{{ ctrl.size || 'md' }}"
+    auto-close="{{ multi ? 'outsideClick' : 'always' }}"
+    on-toggle="ctrl.touched = true"
+    role="menu"
+    uib-keyboard-nav
+    uib-dropdown>
+    <button
+        class="btn btn-select btn-block"
+        uib-dropdown-toggle
+        ng-disabled="!options.length || ctrl.disabled">
+        <span ng-hide="value" class="btn-label btn-placeholder">{{ ctrl.placeholder }}</span>
+        <span ng-show="value" class="btn-label">{{ value }}</span>
+        <i class="material-icons md-caret">&#xE5C5;</i>
+    </button>
+    <ul class="dropdown-menu uib-dropdown-menu" role="group">
+        <li ng-repeat="option in options track by $id(option)" role="menuitem">
+            <a href="" ng-click="select(option)">
+                <span ng-show="multi">
+                    <i class="material-icons" ng-if="ctrl.selected.indexOf(option.model) > -1">&#xE834;</i>
+                    <i class="material-icons" ng-if="ctrl.selected.indexOf(option.model) === -1">&#xE835;</i>
+                </span>
+                {{ option.label }}
+            </a>
+        </li>
+    </ul>
+</div>

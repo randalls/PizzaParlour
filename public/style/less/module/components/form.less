@@ -1,0 +1,191 @@
+label {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"], input[type="number"], input[type="email"], input[type="url"], textarea, tags-input .input {
+    .placeholder(@placeholder-color);
+}
+
+.input-group {
+    .input-group-addon {
+        background-color: @input-bg;
+    }
+
+    input.form-control:not(:first-child) {
+        border-left: 0px;
+    }
+    input.form-control:not(:last-child) {
+        border-right: 0px;
+    }
+}
+
+.form, form {
+    legend {
+        border-bottom: none;
+        font-size: 16px;
+        margin-bottom: 30px;
+
+        small {
+            font-size: inherit;
+            color: inherit;
+        }
+    }
+
+    fieldset {
+        margin-bottom: 30px;
+
+        &:disabled {
+            opacity: 0.6;
+        }
+
+        p {
+            margin: 10px 0px;
+        }
+
+        & > legend + p {
+            margin-top: 0px;
+        }
+    }
+
+    .form-action {
+        margin-top: 30px;
+    }
+
+    .actions {
+        .btn-link {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
+
+.form-control {
+    border-color: @grey-dark;
+    border-radius: @border-radius-base;
+    height: auto;
+    line-height: 20px;
+    padding: 10px 8px;
+
+    &, &:focus, &:active, &:hover {
+        box-shadow: none;
+    }
+
+    &:focus, &:hover {
+        &:not(.novalidate) {
+            border-color: @blue;
+        }
+        &.novalidate {
+            border-color: @grey-dark;
+        }
+    }
+
+    &.input-sm {
+        font-size: 14px;
+        padding: 6px 6px;
+    }
+}
+
+.form-inline {
+    .form-control {
+        line-height: 22px;
+    }
+
+    label {
+        line-height: 12px;
+        margin-bottom: 0;
+        vertical-align: bottom;
+    }
+}
+
+.has-error {
+    .form-control {
+        &, &:focus {
+            color: @black;
+            border-color: @red;
+            box-shadow: none;
+        }
+    }
+
+    .select {
+        .btn-select, .dropdown-menu {
+            border-color: @red;
+        }
+        .btn-select {
+            color: @red;
+        }
+    }
+}
+
+.has-success {
+    .btn.btn-default.form-control, .form-control {
+        &, &:focus {
+            color: @black;
+            border-color: @green;
+            box-shadow: none;
+        }
+    }
+
+    .select {
+        .btn-select, .dropdown-menu {
+            border-color: @green;
+        }
+        .btn-select {
+            color: @green;
+        }
+    }
+}
+
+.has-validation {
+    position: relative;
+    .form-control-feedback {
+        font-size: 18px;
+        right: 8px;
+        bottom: 15px;
+        top: auto;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.caret {
+    content: '\00E5C5';
+}
+
+.landing-form {
+    background-color: @blue-dark;
+    color: @white;
+    border: 1px solid @blue-dark;
+    padding: 10px;
+    -moz-border-radius: @border-radius-base;
+    -khtml-border-radius: @border-radius-base;
+    -webkit-border-radius: @border-radius-base;
+    border-radius: @border-radius-base;
+
+    legend {
+        margin-bottom: 0;
+    }
+
+    button {
+        background-color: @orange;
+    }
+
+    a {
+        color: @grey;
+        text-decoration: underline;
+    }
+
+    .display-1 {
+        color: @white;
+    }
+
+    .form-action {
+        margin-top: 10px;
+    }
+}
+
+@media(max-width: 767px) {
+    .form .form-action {
+        margin-top: 0px;
+    }
+}

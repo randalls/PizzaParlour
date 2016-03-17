@@ -1,0 +1,142 @@
+body {
+    background-color: @beige;
+}
+
+.layout-web {
+    header {
+        background: url('/target/asset/image/pizza_header.jpg') no-repeat top left;
+        background-size: 100% auto;
+        height: 420px;
+        position: relative;
+        padding: 0;
+
+        .nav {
+            width: 100%;
+            height: 60px;
+            background-color: @light-green;
+            margin-top: 50px;
+
+            #logo-parent{
+                background:transparent;
+                width:200px;
+                height:120px;
+                overflow:hidden;
+
+                a {
+                    opacity: 1;
+                    filter: alpha(opacity=100);
+                }
+            }
+
+            #logo {
+                width: 390px;
+                height: 110px;
+                margin:10px 0 0 0px;
+                background: @dark-green;
+                -moz-border-radius: 100px / 50px;
+                -webkit-border-radius: 100px / 50px;
+                border-radius: 100px / 50px;
+                position: absolute;
+                left: 40px;
+                top: -35px;
+                color: @grey;
+                border: 2px solid @grey;
+
+                h1 {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .nav-list {
+                font-size: 20px;
+                padding: 17px;
+
+                a {
+                    color: @grey;
+                }
+            }
+        }
+    }
+}
+
+.page {
+    .page-header {
+
+        .page-title {
+            font-weight: @light;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        small {
+            font-size: 100%;
+            font-weight: @light;
+            color: inherit;
+        }
+        .page-header-actions {
+            .clearfix();
+            padding: 0px 0px 10px 0px;
+            .right-xs, .right-sm {
+                display: inline-block;
+            }
+
+            .btn {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.page-header {
+    margin: 0px;
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding: 30px 0px;
+
+    &.page-header-bordered {
+        border-bottom: @border-default;
+        margin-bottom: 30px;
+    }
+
+    .page-title {
+        margin: 0px;
+    }
+}
+
+.page-header + .nav {
+    margin-bottom: 50px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+@media (min-width: 998px) {
+    .page-header-actions.page-header-actions-right {
+        float: right;
+        .btn {
+            margin-right: 0px;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (max-width: 997px) {
+    .page-header-actions {
+
+        .btn {
+            margin-left: 0px;
+            margin-right: 5px;
+        }
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    input[type="date"] {
+        line-height: 24px;
+    }
+}

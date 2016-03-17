@@ -1,0 +1,7 @@
+<div ng-switch="ctrl.status" class="status status-{{ ctrl.status | projectStatus }}">
+    <div class="clearfix">
+        <div class="status-marker pull-left"></div>
+        <div class="body-1 status-marker-label" ng-if="ctrl.label"><strong>{{ ctrl.label }}</strong></div>
+    </div>
+    <div class="status-content" ng-if="ctrl.type !== 'mini'" ng-transclude></div>
+</div>

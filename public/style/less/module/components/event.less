@@ -1,0 +1,35 @@
+.event-type {
+    float: right;
+    position: relative;
+    padding-right: @status-dot-size + 8px;
+
+    &::before {
+        content: " ";
+        height: @status-dot-size;
+        width: @status-dot-size;
+        border: 2px solid @grey;
+        border-radius: @status-dot-size / 2;
+        background: @brand-success;
+        border-color: @brand-success;
+        position: absolute;
+        right: 0px;
+        top: 6px;
+    }
+
+    &.event-type-1::before {
+        background: @orange;
+        border-color: @orange;
+    }
+    &.event-type-2::before {
+        background: @red;
+        border-color: @red;
+    }
+    &.event-type-3::before {
+        background: @green;
+        border-color: @green;
+    }
+    &.event-type-4::before {
+        background: @blue;
+        border-color: @blue;
+    }
+}

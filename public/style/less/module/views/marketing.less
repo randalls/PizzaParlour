@@ -1,0 +1,128 @@
+.page-marketing {
+    .jumbotron {
+        &.jumbotron-bg {
+            background-color: @white;
+            background-image: linear-gradient(to top, @grey-lighest, @white);
+        }
+        &.jumbotron-hero {
+            border-bottom: @border-default;
+            overflow-y: hidden;
+            padding-bottom: 0px;
+        }
+        &.jumbotron-pad {
+            padding-bottom: 50px;
+        }
+        &.jumbotron-nopad {
+            padding-bottom: 0px;
+        }
+        &.jumbotron-dailies {
+            background: url('/target/asset/image/marketing/dailies-landing/dailies-hero-bg.jpg') no-repeat bottom center;
+        }
+    }
+
+    .heading {
+        margin-bottom: 50px;
+
+        & > .btn {
+            margin-top: 40px;
+        }
+    }
+
+    .section {
+        border-bottom: @border-default;
+        padding: 40px 0px 40px 0px;
+
+        p.body-1, p.body-2 {
+            margin-bottom: 60px;
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &:last-child {
+            border-bottom: 0px;
+            padding-bottom: 0px;
+        }
+
+        &.section-bar {
+            padding: 40px 0px;
+            .bg-primary();
+        }
+    }
+
+    .section.section-no-bottom {
+        border-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .vp-ui-mock {
+        background-image: url('/target/asset/image/marketing/vp-landing/map-tool.jpg');
+        background-position: right top;
+    }
+
+    .vp-contact-mock {
+        background-image: url('/target/asset/image/marketing/vp-landing/contact-stack.jpg');
+        background-position: left top;
+    }
+
+    .vp-full-bleed {
+        background-repeat: no-repeat;
+        background-clip: border-box;
+        background-size: cover;
+        height: 660px;
+    }
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    .page-marketing {
+        .vp-ui-mock {
+            background-image: url('/target/asset/image/marketing/vp-landing/map-tool-2x.jpg');
+        }
+        .vp-contact-mock {
+            background-image: url('/target/asset/image/marketing/vp-landing/contact-stack-2x.jpg');
+        }
+    }
+}
+
+.brand {
+
+    background: url('/target/asset/image/logo/logos-sprite.png') no-repeat;
+    display: block;
+    height: 40px;
+    margin: auto;
+    overflow: hidden;
+    text-indent: -9999px;
+
+    &.brand-choose-scottsdale {
+        width: 143px;
+    }
+
+    &.brand-cresa {
+        width: 40px;
+        background-position: -143px 0px;
+    }
+
+    &.brand-abi {
+        width: 239px;
+        background-position: -183px 0px;
+    }
+
+    &.brand-evergreen {
+        width: 162px;
+        background-position: -562px 0px;
+    }
+
+    &.brand-nai {
+        width: 183px;
+        background-position: -791px 0px;
+    }
+
+    &.brand-lee {
+        width: 143px;
+        background-position: -1190px 0px;
+    }
+}

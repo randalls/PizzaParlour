@@ -1,0 +1,23 @@
+.navbar-quicklink {
+    .nav.navbar-subnav-nav {
+        & > li {
+            margin: 0px 2.5% 0px 0px;
+            width: 18%;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-phone) {
+    .navbar-quicklink {
+        .nav.navbar-subnav-nav {
+            & > li {
+                margin: 0px 2%;
+                width: 16%;
+            }
+        }
+    }
+}

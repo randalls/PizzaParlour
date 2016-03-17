@@ -1,0 +1,86 @@
+.contact {
+    &.contact-sm {
+
+        address {
+            strong {
+                display: block;
+                padding: 0px 0px 8px 0px;
+            }
+            p {
+                margin-bottom: 5px;
+            }
+            .material-icons {
+                margin-right: 6px;
+            }
+            margin-bottom: 0px;
+        }
+
+        .dropdown {
+            .dropdown-toggle {
+                padding-left: 28px;
+                position: relative;
+                &::before {
+                    .material-icon('\00E853');
+                    font-size: 18px;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+        }
+    }
+}
+
+.table-contact {
+    tbody {
+        & > tr {
+            & > td {
+                &:last-child {
+                    width: 10%;
+                }
+            }
+        }
+    }
+}
+
+.panel.panel-linkedin {
+    .panel-heading {
+        h3 {
+            border-bottom: 1px solid @grey-dark;
+            padding-bottom: 10px;
+        }
+        padding-bottom: 10px;
+    }
+    .panel-body {
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+}
+
+.linkedin {
+    linkedin-profile {
+        display: block;
+        padding: 0px 5px;
+    }
+
+    &.no-linkedin {
+        text-align: center;
+        padding: 20px;
+        background: @white;
+        border-radius: @border-radius-base;
+        border: @border-dark;
+        margin: 10px;
+        color: @grey-dark;
+    }
+}
+
+.contact-properties {
+    static-map, [static-map] {
+        display: block;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

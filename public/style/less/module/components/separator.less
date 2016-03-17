@@ -1,0 +1,40 @@
+.separator {
+    &.separator-text {
+        position: relative;
+        font-weight: @bold;
+        padding: 20px 0px;
+
+        &::before, &::after {
+            border-top: @border-dark;
+            display: block;
+            height: 1px;
+            content: " ";
+            width: 32%;
+            position: absolute;
+            left: 0px;
+            top: 50%;
+        }
+
+        &::after {
+            left: auto;
+            right: 0px;
+        }
+    }
+}
+
+
+
+@media (max-width: @screen-xs-max) {
+    .separator {
+        &.separator-text {
+            &::before, &::after {
+                width: 33%;
+            }
+        }
+    }
+}
+
+hr.invisible {
+    border: none;
+    margin: 24px 0px;
+}

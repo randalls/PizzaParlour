@@ -1,0 +1,33 @@
+.form-group.cc.has-feedback {
+    & > .has-validation {
+        .form-control-feedback {
+            display: none;
+        }
+    }
+
+    & > .has-validation {
+        position: relative;
+        &:after {
+            content: ' ';
+            width: 50px;
+            height: 41px;
+            bottom: 0px;
+            right: 0px;
+            position: absolute;
+            background-repeat: none;
+        }
+    }
+
+    &.cc-visa > .has-validation:after {
+        background-image: url('/asset/image/card-icons/visa.svg');
+    }
+    &.cc-discover > .has-validation:after {
+        background-image: url('/asset/image/card-icons/discover.svg');
+    }
+    &.cc-american-express > .has-validation:after {
+        background-image: url('/asset/image/card-icons/amex.svg');
+    }
+    &.cc-master-card > .has-validation:after {
+        background-image: url('/asset/image/card-icons/mastercard.svg');
+    }
+}

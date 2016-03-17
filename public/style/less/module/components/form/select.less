@@ -1,0 +1,145 @@
+.input-group {
+    custom-select {
+        min-width: 150px;
+
+        &:first-child .btn {
+            border-right: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            line-height: 22px;
+            padding-bottom: 7px;
+            padding-top: 9px;
+        }
+    }
+}
+
+.select {
+
+    position: relative;
+    width: auto;
+    display: block;
+
+    @maxMenuHeight: 260px;
+
+    &.open {
+        .btn-select {
+            border-radius: @border-radius-base @border-radius-base 0px 0px;
+
+            span {
+                float: left;
+            }
+        }
+        .dropdown-menu {
+            border-top: 0px;
+        }
+
+        .btn-select, .dropdown-menu {
+            border-color: @blue;
+        }
+    }
+
+    .btn-select {
+        background: @white;
+        border-radius: @border-radius-base;
+        color: @black;
+        font-size: 14px;
+        line-height: 24px;
+
+        padding: 9px 2px 9px 10px;
+        text-align: left;
+        text-transform: none;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        .clearfix();
+
+        .material-icons {
+            float: right;
+        }
+    }
+
+    &.select-sm {
+        .btn-select {
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 0px 0px @border-radius-base @border-radius-base;
+        min-width: 0px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        max-height: @maxMenuHeight;
+        padding: 0px;
+
+        max-height: 0px;
+        transition: 300ms ease max-height, 300ms ease opacity;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-1px);
+
+        & > li {
+            & > a {
+                color: @black;
+                line-height: 18px;
+                padding: 10px;
+
+                &:hover {
+                    background: @grey;
+                }
+
+                .material-icons {
+                    color: @grey-dark;
+                }
+            }
+        }
+    }
+
+    &.open .dropdown-menu {
+        max-height: @maxMenuHeight;
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    .dropdown-menu, .btn-select {
+        border: @border-dark;
+        margin: 0px;
+        box-shadow: none;
+        width: 100%;
+    }
+}
+
+.ng-valid.ng-touched:not(.novalidate) {
+    .dropdown-menu:not(:disabled), .btn-select:not(:disabled) {
+        border-color: @brand-success;
+    }
+}
+
+.ng-invalid.ng-touched:not(.novalidate) {
+    .select:not(.open) {
+        .dropdown-menu:not(:disabled), .btn-select:not(:disabled) {
+            border-color: @brand-error;
+        }
+    }
+}
+
+.novalidate {
+    .select {
+        .btn-select, .dropdown-menu {
+            border-color: @grey-dark;
+        }
+    }
+}
+
+fieldset[disabled] .select > .btn-select {
+    cursor: not-allowed;
+}
+fieldset[disabled] .select > .btn-select {
+    background-color: @input-bg-disabled;
+    opacity: 1;
+}

@@ -1,0 +1,18 @@
+<div class="alert alert-{{ alert.type }} clearfix">
+    <div class="alert-icon-container pull-left">
+        <div  ng-switch on="alert.icon">
+            <i class="material-icons" ng-switch-when="danger">&#xE033;</i>
+            <i class="material-icons" ng-switch-when="error">&#xE001;</i>
+            <i class="material-icons" ng-switch-when="success">&#xE86C;</i>
+            <i class="material-icons" ng-switch-when="warning">&#xE002;</i>
+            <i class="material-icons" ng-switch-default>&#xE88E;</i>
+        </div>
+    </div>
+    <div class="alert-text pull-left">
+        <strong class="alert-title" ng-bind="alert.title"></strong>
+        <span class="alert-body" ng-bind="alert.body"></span>
+    </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <i class="material-icons">&#xE14C;</i>
+    </button>
+</div>

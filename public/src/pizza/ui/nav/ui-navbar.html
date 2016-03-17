@@ -1,0 +1,106 @@
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-global">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="marketing.home" id="pizza">
+                <img alt="pizza" ng-src="/target/asset/image/logo/pizza-icon.svg">
+            </a>
+        </div>
+        <ul class="nav navbar-nav visible-xs-block" ng-if="navbar.session.get('isAuthenticated')">
+            <li class="dropdown" uib-dropdown>
+                <a href="#" uib-dropdown-toggle class="dropdown-toggle" role="button" aria-expanded="false">
+                    <span class="">{{ 'navbar.menu' | vzdLocalize }}</span> <i class="material-icons md-24">&#xE5C5;</i>
+                </a>
+                <ul class="dropdown-menu uib-dropdown-menu" role="menu">
+                    <li ui-sref-active-tree="{class: 'active', state: 'dashboard'}" is-authorized="['pizzaProUser']">
+                        <a ui-sref="dashboard.landing">
+                            {{ 'navbar.dashboard' | vzdLocalize }}
+                        </a>
+                    </li>
+                    <li ui-sref-active-tree="{class: 'active', state: 'daily'}" is-authorized="['pizzaProUser', 'ProjectDailiesUser', 'DailiesUser']">
+                        <a ui-sref="daily.list">
+                            {{ 'navbar.dailies.feed' | vzdLocalize }}
+                        </a>
+                    </li>
+                    <li ui-sref-active-tree="{class: 'active', state: 'search'}" is-authorized="['pizzaProUser']">
+                        <a ui-sref="search.property.list">
+                            {{ 'navbar.prospect' | vzdLocalize }}
+                        </a>
+                    </li>
+                    <li ui-sref-active-tree="{class: 'active', state: 'contact'}" is-authorized="['pizzaProUser']">
+                        <a ui-sref="contact.search">
+                            {{ 'navbar.contacts' | vzdLocalize }}
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav hidden-xs">
+            <li ui-sref-active-tree="{class: 'active', state: 'dashboard'}" is-authorized="['pizzaProUser']">
+                <a ui-sref="dashboard.landing">
+                    {{ 'navbar.dashboard' | vzdLocalize }}
+                </a>
+            </li>
+            <li ui-sref-active-tree="{class: 'active', state: 'daily'}" is-authorized="['pizzaProUser', 'ProjectDailiesUser', 'DailiesUser']">
+                <a ui-sref="daily.list">
+                    {{ 'navbar.dailies.feed' | vzdLocalize }}
+                </a>
+            </li>
+            <li ui-sref-active-tree="{class: 'active', state: 'search'}" is-authorized="['pizzaProUser']">
+                <a ui-sref="search.property.list">
+                    {{ 'navbar.prospect' | vzdLocalize }}
+                </a>
+            </li>
+            <li ui-sref-active-tree="{class: 'active', state: 'contact'}" is-authorized="['pizzaProUser']">
+                <a ui-sref="contact.search">
+                    {{ 'navbar.contacts' | vzdLocalize }}
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav" ng-if="!navbar.session.get('isAuthenticated')">
+            <li>
+                <a class="text-icon" ui-sref="marketing.home" aria-expanded="false">
+                    {{ 'navbar.home' | vzdLocalize }}
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="!navbar.session.get('isAuthenticated')">
+            <li>
+                <a href="" class="text-icon" login-button action="register" aria-expanded="false">
+                    {{ 'actions.register' | vzdLocalize }}
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="navbar.session.get('isAuthenticated')">
+            <li class="dropdown" uib-dropdown>
+                <a href="#" uib-dropdown-toggle class="dropdown-toggle" role="button" aria-expanded="false">
+                    <span class="">{{ navbar.session.get('firstName') }} {{ navbar.session.get('lastName') }}</span> <i class="material-icons md-24">&#xE5C5;</i>
+                </a>
+                <ul class="dropdown-menu uib-dropdown-menu" role="menu">
+                    <li ui-sref-active="{class: 'active', state: 'company.list'}" is-authorized="['SuperAdministrator']">
+                        <a ui-sref="company.list">{{ 'navbar.companies' | vzdLocalize }}</a>
+                    </li>
+                    <li ui-sref-active="{class: 'active', state: 'user.list'}" is-authorized="['SuperAdministrator']">
+                        <a ui-sref="user.list">{{ 'navbar.users' | vzdLocalize }}</a>
+                    </li>
+                    <li ui-sref-active="{class: 'active', state: 'blogadmin.list'}" is-authorized="['SuperAdministrator', 'BlogAuthor', 'BlogPublisher']">
+                        <a ui-sref="blogadmin.list">{{ 'navbar.blogAdmin' | vzdLocalize }}</a>
+                    </li>
+                    <li ui-sref-active="{class: 'active', state: 'imageadmin.list'}" is-authorized="['SuperAdministrator', 'BlogAuthor', 'BlogPublisher', 'Researcher']">
+                        <a ui-sref="imageadmin.list">{{ 'navbar.imageAdmin' | vzdLocalize }}</a>
+                    </li>
+                    <!--
+                    <li ui-sref-active="{class: 'active', state: 'account.company'}" is-authorized="['CompanyAdministrator']" is-not-role="['SuperAdministrator']">
+                        <a ui-sref="account.company">{{ 'navbar.companyPreferences' | vzdLocalize }}</a>
+                    </li>
+                    -->
+                    <li ui-sref-active="{class: 'active', state: 'account.user'}">
+                        <a ui-sref="account.user">{{ 'navbar.userPreferences' | vzdLocalize }}</a>
+                    </li>
+                    <li>
+                        <a href="" ng-click="navbar.logout()">{{ 'actions.logout' | vzdLocalize }}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

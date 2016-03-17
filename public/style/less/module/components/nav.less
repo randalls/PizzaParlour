@@ -1,0 +1,23 @@
+.nav.nav-stacked {
+    & > li {
+        & > a {
+            color: @color;
+
+            &:hover, &:focus {
+                background: none;
+            }
+        }
+
+        &.active > a {
+            color: @link-color;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .nav.nav-stacked {
+        & > li {
+            float: left;
+        }
+    }
+}

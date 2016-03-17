@@ -1,0 +1,67 @@
+.tooltip {
+    @tooltipColor: @white;
+    @tooltipBorder: 1px solid @grey-dark;
+    @padding: 2px 4px;
+
+    z-index: @tooltipLevel;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border: @tooltipBorder;
+    padding: @padding;
+    border-radius: @border-radius-base;
+    background-color: @tooltipColor;
+
+    &::after {
+        content: " ";
+        border-right: @tooltipBorder;
+        border-top: @tooltipBorder;
+        background: @tooltipColor;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        margin-left: -4px;
+        transform: rotate(135deg);
+    }
+
+    &.top {
+        padding: @padding;
+    }
+
+    .tooltip-arrow {
+        display: none;
+    }
+
+    .tooltip-inner {
+        background: none;
+        color: @blue-dark;
+    }
+
+    &.left::after, &.right::after {
+        margin-top: -4px;
+        top: 50%;
+        margin-left: 0px;
+    }
+
+    &.right::after {
+        left: -5px;
+        right: auto;
+        transform: rotate(-135deg);
+    }
+    &.left::after {
+        left: auto;
+        right: -5px;
+        transform: rotate(45deg);
+    }
+    &.bottom::after {
+        top: -5px;
+        transform: rotate(-45deg);
+    }
+    &.bottom-right::after {
+
+    }
+}
+
+.modal .tooltip {
+    z-index: @modalLevel + @tooltipLevel;
+}

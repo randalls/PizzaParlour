@@ -1,0 +1,14 @@
+<a ng-href="http://maps.google.com/?q={{ ctrl.street1 }} {{ ctrl.city }} {{ ctrl.state }} {{ ctrl.zip }}" target="_blank">
+    <span ng-if="ctrl.street1">
+        {{ ctrl.street1 }}<span ng-if="ctrl.street2">&nbsp;{{ ctrl.street2 }}</span>,&nbsp;
+    </span>
+    <span ng-if="ctrl.city">
+        {{ ctrl.city }}&nbsp;
+    </span>
+    <span ng-if="ctrl.state">
+        {{ ctrl.state }}&nbsp;
+    </span>
+    <span ng-if="ctrl.zip">
+        {{ ctrl.zip }}
+    </span>
+</a>

@@ -1,0 +1,12 @@
+{
+    "access_token": "rlqm8rQW3xWlkCX9M49Fs0X_uaHZC0Mc694biWOoDE9wgPZDwVTu_OAn8qiIIsu41lm3qSTWeYt3W94T7PwYErI1iDS9AKuBmXPgyfrNbOJPV6mIdV_iNemdm-efcy-9pKmlGHwFhfhLCrS4QkcY9YN2WzckDcSUXLj14U67zhWfr57RtLti_rt-F56gtZanwA3Jb54xElycoE9CT-DZdCwc95z9-GO4vMZIoSTKXf6lV1WzSFHAp8hVhgyKQ8BjSwR8lO5ElZ5Pj71hodkHZP2_vcXO2blPO0E9HtxqBD_q_0g9wiCjhEuWv99FSHP2KVDXnpsbZunmOqS2v3hbem1QHhoC5udq4SXw_VdGzS0",
+    "token_type": "bearer",
+    "expires_in": 1799,
+    "refresh_token": "8aad0c36aa114732ae344ba271b2b5ad",
+    "as:client_id": "VizzdaApp",
+    "userName": "rshimkus@vizzda.com",
+    "userId": "3f2b5402-20b4-4206-a97c-ad202a670f8a",
+    "role": "SystemAdministrator",
+    ".issued": "Wed, 08 Apr 2015 21:12:31 GMT",
+    ".expires": "Wed, 08 Apr 2015 21:42:31 GMT"
+}

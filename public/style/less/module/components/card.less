@@ -1,0 +1,41 @@
+.card {
+    background: @white;
+    border: @border-default;
+    border-radius: @border-radius-base;
+    color: @black;
+    margin: 36px 0px;
+    padding: 32px;
+    transition: all 300ms;
+
+    &, .card-body, .card-heading, .card-heading .subhead {
+        display: block;
+    }
+
+    &.card-hover:hover {
+        .shadow-z-2();
+        opacity: 1;
+        color: @black;
+    }
+
+    &.card-disabled, &.card-disabled:hover, &.card-disabled:focus {
+        opacity: 0.4;
+        box-shadow: none;
+    }
+}
+
+.card, .details-section {
+    .row.row-separated {
+
+        margin: 0px;
+        padding-top: 20px;
+        padding-bottom: 8px;
+
+        &.row-separated-below:first-child {
+            border-top: @border-default;
+        }
+
+        &.row-separated-below {
+            border-bottom: @border-default;
+        }
+    }
+}

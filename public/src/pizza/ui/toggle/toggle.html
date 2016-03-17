@@ -1,0 +1,6 @@
+<button class="btn btn-toggle" ng-class="{'off' : !value, 'on': !!value}" ng-click="toggle(value)">
+    <span class="toggle-text">
+        {{ 'actions.' + ((!!value) ? 'on' : 'off') | vzdLocalize }}
+    </span>
+    <i class="material-icons">&#xE3A6;</i>
+</button>

@@ -1,0 +1,29 @@
+.messages, ng-messages {
+    margin-bottom: 10px;
+    .message {
+        &.message-error {
+            color: @brand-error;
+        }
+        &.message-success {
+            color: @brand-success;
+        }
+    }
+
+    &.messages-error {
+        ng-message, .message {
+            color: @brand-error;
+        }
+    }
+
+    ng-messages.ng-inactive {
+        margin: 0px;
+    }
+}
+
+ng-messages:not(.messages-single) {
+    & > ng-message {
+        display:list-item;
+        list-style-type: circle;
+        margin-left: 20px;
+    }
+}

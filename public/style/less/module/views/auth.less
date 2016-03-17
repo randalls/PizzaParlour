@@ -1,0 +1,83 @@
+.page.page-auth {
+
+    .page-header {
+        border-bottom: none;
+    }
+
+    .well {
+        padding: 10% 10%;
+    }
+
+    button {
+        margin-bottom: 10px;
+    }
+
+    &.page-register {
+
+        fieldset {
+            margin-bottom: 60px;
+        }
+
+        .confirmation {
+            .lead {
+                margin: 40px 0px;
+            }
+            .btn {
+                margin-bottom: 10%;
+            }
+        }
+    }
+
+    &.page-login-choice {
+        padding-top: 120px;
+    }
+}
+
+.modal-login {
+    .form {
+        .form-info {
+            height: 171px;
+        }
+    }
+    .modal-content {
+        position: static;
+        .divider {
+            position: absolute;
+            height: 100%;
+            left: 50%;
+            top: 0px;
+            width: 1px;
+            border-left: 1px solid @grey-dark;
+        }
+    }
+
+    .modal-body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .page-auth {
+        &.page-register {
+            .breadcrumb {
+
+                padding: 4px 2px;
+                margin: 0px 0px 4px 0px;
+                border-bottom: @border-default;
+
+                & > li + li, li {
+                    //padding-right: 10px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .page-header {
+            margin: 0px;
+        }
+        .well {
+            border: none;
+            padding: 0px;
+        }
+    }
+}

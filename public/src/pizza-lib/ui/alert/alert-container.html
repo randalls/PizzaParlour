@@ -1,0 +1,6 @@
+<div class="pizza-alert-container">
+    <pizza-alert
+        ng-repeat="alert in alertCtrl.alerts track by $id(alert) | orderBy:predicate:reverse"
+        pizza-alert-options="alert">
+    </pizza-alert>
+</div>

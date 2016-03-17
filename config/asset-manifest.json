@@ -1,0 +1,28 @@
+{
+	"lib": {
+		"path": "public/src/vizzda-lib/src/",
+		"minified": {
+			"type": "uglifyjs",
+			"path": "public/target/",
+			"prefix": "/target/",
+			"name": "vizzda-lib.js"
+		},
+		"prefix": "/src/vizzda-lib/src/",
+		"files": [
+			"**/*.js"
+		]
+	},
+	"src": {
+		"path": "public/src/vizzda/",
+		"minified": {
+			"type": "uglifyjs",
+			"path": "public/target/",
+			"prefix": "/target/",
+			"name": "listing-src.js"
+		},
+		"prefix": "/src/vizzda/",
+		"files": [
+			"**/*.js"
+		]
+	}
+}

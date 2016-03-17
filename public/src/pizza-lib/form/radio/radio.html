@@ -1,0 +1,4 @@
+<div ng-click="ctrl.select(ctrl.value)">
+    <input class="with-gap" type="radio" name="{{ ctrl.name }}" value="{{ ctrl.value }}" ng-checked="ctrl.parent.selected === ctrl.value" ng-disabled="ctrl.disabled" />
+    <label ng-transclude></label>
+</div>

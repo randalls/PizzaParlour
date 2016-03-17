@@ -1,0 +1,42 @@
+.property-history {
+
+    .dropdown-menu {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        & > li {
+            & > a {
+                font-size: 12px;
+                line-height: 18px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+            &.selected > a {
+                font-weight: @bold;
+            }
+        }
+    }
+}
+
+.property-event-summary {
+    .section-row-overview {
+        padding-bottom: 10px;
+    }
+
+    .section-row {
+        .material-icons, .contact.contact-sm .dropdown .dropdown-toggle::before {
+            color: @grey-dark;
+        }
+    }
+}
+
+@media (max-width:998px) {
+    .panel-history {
+        background: none;
+        border-radius: 0px;
+        border: none;
+        border-bottom: @border-default;
+        .panel-heading {
+            padding: 0px 16px;
+        }
+    }
+}

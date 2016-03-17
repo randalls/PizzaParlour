@@ -1,0 +1,10 @@
+<div dropdown on-toggle="toggled(open)">
+    <a href id="simple-dropdown" dropdown-toggle>
+        {{ displayValue }}
+    </a>
+    <ul class="dropdown-menu">
+        <li ng-repeat="choice in options.items" ng-class="{'selected': choice === selected}" ng-class="{'disabled': choice.disabled}">
+            <a href="" ng-click="select(choice)">{{ choice.label }}</a>
+        </li>
+    </ul>
+</div>

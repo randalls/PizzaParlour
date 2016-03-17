@@ -1,0 +1,55 @@
+.navbar.navbar-filters {
+    .filter {
+        padding-right: 1%;
+        width: 19%;
+    }
+
+    .separate {
+        margin-bottom: 20px;
+    }
+
+    .filter-scope {
+        width: 15%;
+    }
+
+    .filter-text {
+        width: 28%;
+    }
+
+    .filter-tags {
+        width: 16%;
+    }
+
+    .filter-heading {
+        font-size: 18px;
+        margin: 0px;
+        padding: 8px 0px 0px 0px;
+    }
+}
+
+@media (max-width: @screen-tablet) {
+    .navbar.navbar-filters {
+        .filter {
+            margin-bottom: 2px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 33%;
+        }
+        .filter-scope {
+            width: 25%;
+        }
+        .filter-text {
+            width: 74%;
+        }
+    }
+}
+
+@media (max-width: @screen-tiny) {
+    .navbar.navbar-filters {
+        .filter-scope {
+            .dropdown-toggle {
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.breadcrumb {
+    color: @brand-primary;
+    margin-bottom: 10px;
+
+    & > li {
+        font-size: 16px;
+    }
+
+    & > .active {
+        color: @brand-primary;
+        font-weight: 600;
+    }
+
+    & > .active ~ li {
+        color: @grey-light;
+    }
+
+    .btn.btn-link {
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: none;
+        padding: 0px;
+        color: @brand-primary;
+
+        &:hover {
+            color: @brand-primary;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .active {
+        .btn.btn-link {
+            font-weight: 700;
+        }
+    }
+}

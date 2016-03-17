@@ -1,0 +1,62 @@
+.map-container {
+    height: 100%;
+    .map {
+        position: relative;
+    }
+}
+.angular-google-map {
+    height: 100%;
+    .angular-google-map-container {
+        height: 100%;
+    }
+
+    .property-map-label {
+        color: @white;
+        transform: translate(-50%, -26px);
+    }
+
+    .map-cluster > div {
+        color: @white !important;
+    }
+}
+
+.map-window {
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+    padding: 40px;
+    z-index: @map-window-level;
+}
+
+.map-section {
+    .map-key {
+        li {
+            margin-left: 16px;
+            &, & .material-icons {
+                line-height: 14px;
+            }
+        }
+    }
+}
+
+.map-search {
+
+    & > .btn.btn-map-search {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        margin-left: -100px;
+        width: 200px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .angular-google-map,
+    .angular-google-map-container {
+        width: 100%;
+        height: 100%;
+    }
+}

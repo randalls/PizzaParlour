@@ -1,0 +1,113 @@
+tags-input {
+    .tags {
+
+        .form-control();
+        padding: 2px;
+
+        & > .tag-list {
+            .tag-item {
+                background: @white;
+                border-color: @grey-dark;
+                border-radius: @border-radius-base;
+                color: @grey-dark;
+                height: 36px;
+                line-height: 33px;
+                padding-left: 8px;
+                padding-right: 8px;
+
+                &.selected {
+                    border-color: @brand-danger;
+                    color: @brand-danger;
+                    .remove-button {
+                        color: @brand-danger;
+                    }
+                }
+
+                .remove-button {
+                    color: @grey-dark;
+                }
+            }
+        }
+
+        & > .input {
+            margin: 7px 5px;
+        }
+    }
+}
+
+.tag {
+    font-size: 12px;
+}
+
+.tags {
+    &.tags-selector {
+        padding: 0px 6px;
+        .tags-section {
+            border-bottom: 1px solid @grey-light;
+        }
+
+        .tags-selected {
+            .tag {
+                padding: 0px 0px 4px 0px;
+                display: inline-block;
+            }
+
+            & > h6 {
+                margin: 0px 5px 0px 0px;
+                font-style: normal;
+            }
+        }
+
+        .actions {
+            .clearfix();
+            margin-bottom: 10px;
+        }
+
+        .tags-search {
+            margin-bottom: 12px;
+
+            .search-quick {
+                .placeholder(@grey);
+                border-radius: 0px;
+                box-shadow: none;
+                padding: 8px 4px;
+                border: none;
+                border-bottom: 1px solid @grey-light;
+            }
+
+            & > ul {
+                overflow-y: scroll;
+                max-height: 160px;
+                min-height: 160px;
+                margin-bottom: 0px;
+                position: relative;
+
+                &:after {
+                    content: " ";
+                    bottom: 0px;
+                    left: 0px;
+                    height: 10px;
+                    position: absolute;
+                }
+
+                & > li {
+                    & > a {
+                        color: @black;
+                        display: block;
+                        font-size: 14px;
+                        line-height: 18px;
+                        padding: 5px 8px;
+                        position: relative;
+                        &:hover {
+                            background: @grey-light;
+                        }
+
+                        .material-icons {
+                            color: @grey-dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

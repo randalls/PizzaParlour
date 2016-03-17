@@ -1,0 +1,220 @@
+body, html {
+    font-family: @primary-font, @secondary-font, @tertiary-font, @quarternary-font;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0px 10px 20px 0px;
+}
+
+label, .label {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.text-icon {
+    .text-icon();
+}
+
+@media (max-width: @screen-phone) {
+    body {
+        font-size: 12px;
+    }
+}
+
+.display-5 {
+    margin-top: 10px;
+    font-size: @display-5-size;
+    font-weight: @display-5-weight;
+    line-height: @display-5-height;
+    font-style: @display-5-style;
+}
+
+.display-4 {
+    font-size: @display-4-size;
+    font-weight: @display-4-weight;
+    line-height: @display-4-height;
+}
+
+.display-3 {
+    font-size: @display-3-size;
+    font-weight: @display-3-weight;
+    line-height: @display-3-height;
+}
+
+.display-2 {
+    font-size: @display-2-size;
+    font-weight: @display-2-weight;
+    line-height: @display-2-height;
+}
+
+.display-1 {
+    font-size: @display-1-size;
+    font-weight: @display-1-weight;
+    line-height: @display-1-height;
+}
+
+.headline {
+    font-size: @headline-size;
+    font-weight: @headline-weight;
+    line-height: @headline-height;
+}
+
+.title {
+    font-size: @title-size;
+    font-weight: @title-weight;
+    line-height: @title-height;
+}
+
+.subhead {
+    font-size: @subhead-size;
+    font-weight: @subhead-weight;
+    line-height: @subhead-height;
+}
+
+.body-2 {
+    font-size: @body-2-size;
+    font-weight: @body-2-weight;
+    line-height: @body-2-height;
+}
+
+.body-1, .default {
+    font-size: @body-1-size;
+    font-weight: @body-1-weight;
+    line-height: @body-1-height;
+}
+
+.caption {
+    font-size: @caption-size;
+    font-weight: @caption-weight;
+    line-height: @caption-height;
+    font-style: @caption-style;
+    text-transform: @caption-transform;
+
+    &.caption-lower {
+        text-transform: lowercase;
+    }
+
+    &.caption-normal {
+        text-transform: none;
+    }
+
+    &.caption-lg {
+        font-size: @body-1-size;
+    }
+}
+
+.strong {
+    font-weight: @bold;
+}
+
+.emphasis {
+    font-style: italic;
+}
+
+.nomargin {
+    margin: 0px;
+}
+.light {
+    font-weight: @normal;
+}
+
+blockquote {
+    border-left: 0px;
+    padding: 0px;
+    .body-2();
+
+    .quote {
+        min-height: 80px;
+    }
+
+    & > footer {
+        //border-left: 5px solid @border-color-dark;
+        color: @black;
+        margin-top: 30px;
+        padding: 6px 0px;
+
+        avatar {
+            display: block;
+            margin-right: 10px;
+        }
+
+        cite {
+            display: block;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.testimonial {
+    background: #f9f9f9 !important;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    font-size: 14px;
+
+    &:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+
+    p {
+        display: inline;
+    }
+}
+
+.xs-text-left {
+    text-align: left;
+}
+
+@media (min-width: @screen-sm) {
+    .sm-text-left {
+        text-align: left;
+    }
+}
+
+@media (min-width: @screen-md) {
+    .md-text-left {
+        text-align: left;
+    }
+}
+
+@media (min-width: @screen-lg) {
+    .lg-text-left {
+        text-align: left;
+    }
+}
+
+.xs-text-right {
+    text-align: right;
+}
+
+@media (min-width: @screen-sm) {
+    .sm-text-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: @screen-md) {
+    .md-text-right {
+        text-align: right;
+    }
+}
+
+@media (min-width: @screen-lg) {
+    .lg-text-right {
+        text-align: right;
+    }
+}

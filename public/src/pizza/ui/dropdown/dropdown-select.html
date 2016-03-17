@@ -1,0 +1,13 @@
+<span class="dropdown {{ direction }}" uib-dropdown on-toggle="ddCtrl.toggled(open)">
+    <a href="" class="dropdown-toggle" uib-dropdown-toggle>
+        <span class="btn-label">{{ text }}</span>
+        <i class="material-icons md-caret">&#xE5C5;</i>
+    </a>
+    <ul class="dropdown-menu uib-dropdown-menu">
+        <li ng-repeat="option in options track by $id(option)" ng-class="{'selected': value === option.model}">
+            <a href="" ng-click="select(option)">
+                {{ option.label }}
+            </a>
+        </li>
+    </ul>
+</span>

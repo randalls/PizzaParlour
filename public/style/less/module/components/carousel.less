@@ -1,0 +1,76 @@
+.carousel {
+
+    &:hover {
+        .carousel-control {
+            opacity: 0.8;
+            &:disabled {
+                opacity: 0.2;
+            }
+        }
+    }
+
+    .carousel-inner {
+        position: relative;
+        background: @black;
+    }
+
+    .item {
+        position: relative;
+        display: block;
+        text-align: center;
+        .item-container img {
+            max-width: 100%;
+        }
+    }
+
+    .carousel-control {
+        opacity: 0.2;
+        background: none;
+        border: none;
+
+        &.left {
+            left: 0px;
+            right: auto;
+        }
+
+        .material-icons {
+            top: 50%;
+            position: absolute;
+            margin-top: -30px;
+            font-size: 48px;
+
+            left: inherit;
+            right: inherit;
+        }
+    }
+
+    &.softFade {
+
+        @duration: 500ms;
+        @timingIn: ease;
+        .item .item-container.ng-hide-add.ng-hide-add-active,
+        .item .item-container.ng-hide-remove.ng-hide-remove-active {
+            transition: @duration @timingIn all;
+        }
+
+        // start leave
+        .item .ng-hide-add {
+            opacity: 0;
+        }
+
+        // end leave
+        .item .ng-hide-add-active {
+            display: none;
+        }
+
+        // start show
+        .item .ng-hide-remove {
+            opacity: 0;
+        }
+
+        // end show
+        .item .ng-hide-remove-active {
+            opacity: 1;
+        }
+    }
+}

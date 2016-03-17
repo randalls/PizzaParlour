@@ -1,0 +1,132 @@
+.fade {
+    opacity: 0;
+    transition: opacity .15s linear;
+    &.in {
+        opacity: 1;
+    }
+}
+
+.anim-slide {
+    &.ng-hide-remove-active, &.ng-enter {
+        animation:0.5s lightSpeedIn ease;
+    }
+}
+
+.fadeOut() {
+    &.ng-leave,
+    &.ng-hide-add {
+        animation:0.5s fadeOut linear;
+    }
+}
+
+.fadeIn() {
+    &.ng-enter,
+    &.ng-hide-remove {
+        animation:0.5s fadeIn linear;
+        animation-delay: 100ms;
+    }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes lightSpeedIn {.lightSpeedIn();}
+
+.lightSpeedIn() {
+    0% {
+        opacity: 0;
+        transform: translate3d(20px, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0px, 0, 0);
+    }
+}
+
+/*
+ * ngRepeat triggers three animation events: enter, leave and move.
+ */
+
+@stagger: 100ms;
+@duration: 500ms;
+@offset: 20px;
+@timingIn: ease-out;
+.repeat-animation.ng-enter,
+.repeat-animation.ng-leave,
+.repeat-animation.ng-move {
+    transition:@duration @timingIn all;
+}
+
+/* ending enter and move styling
+   (this is what the element will animate from */
+.repeat-animation.ng-enter,
+.repeat-animation.ng-move {
+    opacity: 0;
+    transform: translate3d(@offset, 0px, 0px);
+}
+
+/* ending enter and move styling
+   (this is what the element will animate towards */
+.repeat-animation.ng-enter.ng-enter-active,
+.repeat-animation.ng-move.ng-move-active {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+/* starting leave animation */
+.repeat-animation.ng-leave {
+    opacity: 1;
+}
+
+/* ending leave animation */
+.repeat-animation.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.repeat-animation.ng-enter,
+.repeat-animation.ng-leave,
+.repeat-animation.ng-move {
+    transition:@duration ease all;
+}
+
+.repeat-animation.ng-enter-stagger,
+.repeat-animation.ng-move-stagger {
+    transition-delay:@stagger;
+    transition-duration:0;
+}
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+    -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+    opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
+.animate-show {
+    opacity: 1;
+}
+
+.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+    transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+    line-height: 0;
+    opacity: 0;
+}

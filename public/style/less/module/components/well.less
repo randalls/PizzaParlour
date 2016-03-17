@@ -1,0 +1,45 @@
+.well {
+    border-color: @grey;
+    box-shadow: 0px 0px 0px;
+    background: none;
+    display: block;
+    margin: 0px 0px 20px 0px;
+    padding: 24px;
+
+    &.well-primary {
+        background-color: @grey-light;
+    }
+
+    &.well-default {
+        background-color: @white;
+        border: @border-dark;
+    }
+
+    &.well-zero {
+        font-size: 16px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        p {
+            margin-bottom: 0px;
+        }
+    }
+
+    &.well-lg {
+        padding: 48px;
+    }
+
+    &.well-xl {
+        min-height: 400px;
+        padding: 100px 50px;
+    }
+
+    &.well-col {
+        margin-bottom: 0px;
+    }
+
+    .jumbotron {
+        padding: 0px;
+        margin-bottom: 48px;
+    }
+}

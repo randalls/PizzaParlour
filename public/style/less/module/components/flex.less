@@ -1,0 +1,23 @@
+.flex-panel {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+
+    .flex-panel-heading, .flex-panel-footer {
+        flex-basis: 50px;
+    }
+
+    .flex-panel-content {
+        flex-basis: 100%;
+        overflow-y: scroll;
+    }
+
+    .flex-panel-footer {
+        padding: 20px 0px;
+        flex-basis: 40px;
+        .pagination {
+            margin: 0px;
+        }
+    }
+}

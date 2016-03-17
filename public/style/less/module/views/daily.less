@@ -1,0 +1,39 @@
+.state-daily {
+    .page-header {
+        background: @white;
+    }
+    background: @grey-light;
+}
+
+.page-daily {
+    .filter .dropdown {
+        .dropdown-toggle {
+            .display-1();
+        }
+    }
+}
+
+@media (max-width: @screen-tablet) {
+    .page-daily {
+
+        padding-top: 32px;
+
+        .page-header {
+            padding: 12px;
+            position: fixed;
+            top: @navbar-height;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .filter.affix {
+            top: 72px;
+        }
+    }
+}
+
+@media (max-width: @screen-phone) {
+    .page-daily {
+        padding-top: 72px;
+    }
+}

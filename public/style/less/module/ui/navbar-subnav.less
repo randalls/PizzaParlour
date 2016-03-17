@@ -1,0 +1,25 @@
+.navbar.navbar-subnav {
+    padding: 28px;
+
+    .navbar-subnav-nav {
+        .clearfix();
+        color: @black;
+        float: none;
+
+        .dropdown {
+            & > .dropdown-toggle {
+                color: inherit;
+            }
+        }
+
+        & > li {
+            float: left;
+        }
+    }
+}
+
+@media (max-width: @screen-small) {
+    .navbar.navbar-subnav {
+        padding: 20px 10px;
+    }
+}

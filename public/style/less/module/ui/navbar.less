@@ -1,0 +1,218 @@
+.navbar-default {
+    background: @white;
+    border: none;
+    border-bottom: 1px solid @grey;
+    padding: 20px 0px;
+
+    .navbar-btn {
+        margin: 2px 0px;
+    }
+
+    .navbar-nav > li > a {
+        text-transform: uppercase;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+}
+
+.navbar-header {
+    display: inline-block;
+    float: left;
+    padding: 0px 16px 0px 8px;
+    position: relative;
+
+    .navbar-toggle {
+        border: none;
+        &:hover, &:focus {
+            background: @brand-primary;
+        }
+    }
+    .navbar-brand {
+        padding: 0px 10px;
+        height: auto;
+        img {
+            height: @navbar-brand-size;
+        }
+    }
+}
+
+.navbar-web {
+    margin-bottom: 0px;
+
+    .navbar-nav {
+        & > li > a {
+            font-size: @navbar-web-font-size;
+            line-height: 18px;
+        }
+    }
+
+    .btn {
+        font-size: @navbar-web-font-size;
+    }
+}
+
+.navbar-global {
+    background: @blue-dark;
+    border-bottom: none;
+    border-top: none;
+    height: @navbar-height;
+
+    box-shadow: 0px 1px 3px #999;
+
+    .navbar-brand {
+        padding: (@navbar-height - @navbar-brand-size) / 2;
+    }
+    .navbar-title {
+        color: @white;
+        font-size: 16px;
+    }
+    .navbar-nav {
+        @button-height: @navbar-link-line-height;
+        @buttonPadding: (@navbar-height - @button-height) / 2;
+        & > li {
+            &.active {
+                a {
+                    background: none;
+                    box-shadow: none;
+                    font-weight: @bold;
+                    text-align: center;
+                }
+            }
+            & > a {
+                color: @white;
+                padding-top: @buttonPadding;
+                padding-bottom: @buttonPadding;
+                font-size: @navbar-font-size;
+                line-height: @button-height;
+
+                & > .material-icons {
+                    line-height: @button-height;
+                    height: @button-height;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}
+
+.navbar {
+    .navbar-title {
+        font-weight: @light;
+        margin: 0px;
+        width: auto;
+    }
+    .navbar-nav {
+        float: left;
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        &.navbar-right {
+            float: right;
+        }
+        & > li {
+            float: left;
+            &.active {
+                a {
+                    &:hover, &:focus, &:active {
+                        background: none;
+                    }
+                }
+            }
+            & > a {
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-subnav {
+        .navbar-nav > li > a {
+            padding: 20px 15px;
+        }
+    }
+    .navbar {
+        .navbar-nav > li > a {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &.navbar-global {
+            .navbar-title {
+                .center();
+                width: auto;
+                color: @white;
+                font-size: 16px;
+                margin: 8px 0px 0px 0px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .navbar {
+
+        &.navbar-inverse {
+            .navbar-nav {
+                .dropdown {
+                    & > .dropdown-menu {
+                        & > li.active, & > li {
+                            & > a:hover {
+                                background: none;
+                                color: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.navbar-web {
+            line-height: 20px;
+            margin-bottom: 0px;
+            min-height: 0px;
+            padding: 10px;
+
+            .navbar-header {
+                float: left;
+            }
+
+            .navbar-main-menu {
+                border-top: @border-default;
+                width: 100%;
+                float: none;
+
+                .navbar-nav {
+                    width: 100%;
+                    & > li {
+                        display: block;
+                        float: left;
+                        text-align: center;
+                        width: 25%;
+                    }
+                }
+            }
+            .auth {
+                float: right;
+            }
+        }
+
+        &.navbar-web + .navbar-subnav {
+            min-height: 0px;
+            padding: 0px 8px;
+
+            .navbar-nav {
+                margin: 0px;
+                width: 100%;
+                & > li {
+                    display: block;
+                    text-align: center;
+                    width: 33%;
+                }
+            }
+        }
+    }
+}

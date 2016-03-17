@@ -1,0 +1,44 @@
+.market-selected {
+    display: inline-block;
+    padding: 4px 12px;
+}
+
+.btn.btn-market {
+
+    padding-left: 50px;
+    position: relative;
+
+    &.selected {
+        &::after {
+            content: '\00E5CA';
+            width: 32px;
+            height: 32px;
+            position:absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'Material Icons';
+            color: @brand-success;
+            font-size: 24px;
+        }
+    }
+
+    &::before {
+        content: " ";
+        width: 32px;
+        height: 32px;
+        position:absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    &.btn-market-1 {
+        &::before {
+            background: url('/target/asset/image/market/icon/az.svg') top left no-repeat;
+        }
+    }
+    &.btn-market-4 {
+        &::before {
+            background: url('/target/asset/image/market/icon/fl.svg') top left no-repeat;
+        }
+    }
+}
