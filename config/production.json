@@ -1,6 +1,6 @@
 {
     "host": {
-        "name": "172.31.1.71",
+        "name": "localhost",
         "port": 1234
     }
 }
