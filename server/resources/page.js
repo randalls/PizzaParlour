@@ -10,7 +10,7 @@ module.exports = function () {
     pageRoutes.get('/', pages.index);
     pageRoutes.get('/home', pages.index);
     pageRoutes.get('/menu', pages.index);
-    pageRoutes.get('/create', pages.index);
+    pageRoutes.get('/create?', pages.index);
 
 
     return pageRoutes;

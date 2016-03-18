@@ -6,11 +6,12 @@ angular.module('pizza.menu.ctrl', [
 .controller('MenuController', [
     '$log',
     '$scope',
+    '$state',
     'lodash',
     '$uibModal',
     'PizzaService',
     'Menu',
-    function ($log, $scope, _, $modal, PizzaService, Menu) {
+    function ($log, $scope, $state, _, $modal, PizzaService, Menu) {
             'use strict';
             var ctrl = this;
             ctrl.Menu = Menu;
@@ -30,6 +31,12 @@ angular.module('pizza.menu.ctrl', [
                             return PizzaService.getToppings(pizza.id);
                         }
                     }
+                });
+            };
+
+            ctrl.addToppings = function(pizza) {
+                $state.go('create.edit', {
+                    pizzaId: pizza.id
                 });
             };
     }

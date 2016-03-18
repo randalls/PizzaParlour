@@ -1,0 +1,58 @@
+<section class="page page-marketing">
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <h2 class="display-2">Add Toppings to Your Pizza</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="display-3">Available Toppings</h2>
+                        <ul class="list-unstyled">
+                            <li style="margin: 10px;">
+                                <div class="row">
+                                    <form name="newTopping" class="form" novalidate>
+                                        <div class="col-md-8">
+                                            <div class="form-group" has-validation="newTopping.toppingName">
+                                                <label for="toppingName">Add New Topping</label>
+                                                <input type="text" name="toppingName" class="form-control" ng-model="ctrl.newTopping.name" placeholder="Topping Name" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>
+                                                &nbsp;
+                                            </p>
+                                            <button type="submit" class="btn btn-default" ng-click="ctrl.addTopping()" ng-disabled="newTopping.$invalid">
+                                                <i class="material-icons">&#xE899;</i>
+                                                Save
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            <li ng-repeat="topping in ctrl.toppings"  style="margin:10px;">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        {{topping.name}}
+                                    </div>
+                                    <div class="col-md-4 pull-left">
+                                        <button class="btn btn-default btn-sm" ng-click="ctrl.addToPizza(topping)">Add</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="display-3">Toppings Added</h2>
+                    <p ng-if="!ctrl.addedToppings">
+                        No Toppings Added
+                    </p>
+                    <ul>
+                        <li ng-repeat="addedTopping in ctrl.addedToppings">
+                            <span class="">{{addedTopping.name}}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

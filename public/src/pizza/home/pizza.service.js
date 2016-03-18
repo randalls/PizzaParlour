@@ -6,10 +6,11 @@ angular.module('pizza-ui.pizza.service', [
         'use strict';
 
         this.$get = [
+            '$q',
             '$log',
             'lodash',
             'pizzaApi',
-            function ($log, _, api) {
+            function ($q, $log, _, api) {
                 var service = {};
 
                 service.query = function () {

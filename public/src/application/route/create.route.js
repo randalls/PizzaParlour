@@ -1,6 +1,7 @@
 angular.module('pizza-app.route.create', [
     'ui.router',
-    'pizza.create.ctrl'
+    'pizza.create.ctrl',
+    'pizza.edit.ctrl'
 ])
 .config([
     '$stateProvider',
@@ -22,11 +23,28 @@ angular.module('pizza-app.route.create', [
                     url: '',
                     views: {
                         page: {
-                            contoller: 'CreateFormController',
+                            controller: 'CreateFormController',
                             controllerAs: 'ctrl',
-                            templateUrl: '/pizza/home/create.html',
+                            templateUrl: '/pizza/home/create.html'
+                        }
+                    }
+                }
+            ).state(
+                'create.edit',
+                {
+                    url: '/:pizzaId',
+                    views: {
+                        page: {
+                            controller: 'EditPizzaController',
+                            controllerAs: 'ctrl',
+                            templateUrl: '/pizza/home/edit.html',
                             resolve: {
-                                CurrentToppings: ['ToppingsService', function (ToppingsService) { return ToppingsService.query();}]
+                                Toppings: [
+                                    'ToppingsService',
+                                    function (ToppingsService) {
+                                        return ToppingsService.query();
+                                    }
+                                ]
                             }
                         }
                     }
