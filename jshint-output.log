@@ -1,0 +1,10 @@
+2 lint errors found in public/src/pizza/home/create.ctrl.js
+  [13,59](W098) 'ToppingsService' is defined but never used.
+  [19,45](W098) 'form' is defined but never used.3 lint errors found in public/src/pizza/home/home.ctrl.js
+  [9,13](W098) 'ctrl' is defined but never used.
+  [7,21](W098) '$scope' is defined but never used.
+  [7,15](W098) '$log' is defined but never used.1 lint errors found in public/src/pizza/home/pizza.service.js
+  [42,10](W033) Missing semicolon.1 lint errors found in public/src/pizza/home/toppings.service.js
+  [30,14](W033) Missing semicolon.1 lint errors found in public/src/pizza/util/moment.filter.js
+  [21,17](W098) 'zone' is defined but never used.1 lint errors found in public/src/pizza-lib/ui/scroll/infinite-scroll.dir.js
+  [39,84](W098) 'response' is defined but never used.
